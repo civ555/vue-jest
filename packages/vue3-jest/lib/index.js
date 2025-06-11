@@ -8,7 +8,7 @@ module.exports = {
     { config, configString, instrument, rootDir }
   ) {
     return crypto
-      .createHash('md5')
+      .createHash('sha256')
       .update(
         babelJest.createTransformer().getCacheKey(fileData, filename, {
           config,
